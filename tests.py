@@ -15,5 +15,5 @@ class TestApp(unittest.TestCase):
         response = self.app.get("/validate", headers=self.headers)
         json_response = json.loads(response.get_data(as_text=True))
         self.assertEqual(json_response['valid'], 'true')
-        if json_response['valid'] == True:
+        if json_response['valid'] == 'true':
             print("The brand of the card is: " + json_response['brand'])
