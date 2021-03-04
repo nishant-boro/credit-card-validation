@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.6"
+
+install:
+  - pip install -U pip
+  - pip install -r requirements.txt
+  - pip install coverage
+  - pip install coveralls
+
+script:
+  - python -m unittest
+  - coverage run -m pytest Tests.py
+  - coverage report -m
+
+after_install: 
+  - coveralls
