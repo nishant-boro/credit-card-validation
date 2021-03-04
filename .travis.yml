@@ -10,7 +10,7 @@ install:
 
 script:
   - python -m unittest
-  - coverage run -m pytest Tests.py
+  - coverage run -m pytest tests.py
   - coverage report -m
 
 after_install: 
